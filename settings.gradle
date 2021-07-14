@@ -1,0 +1,3 @@
+rootProject.name = "FpsDetector"
+include ':app'
+include ':FPSDetector'
