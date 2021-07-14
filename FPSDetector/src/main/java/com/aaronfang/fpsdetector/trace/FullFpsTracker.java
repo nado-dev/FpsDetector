@@ -1,6 +1,7 @@
 package com.aaronfang.fpsdetector.trace;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.aaronfang.fpsdetector.scene.FpsDetector;
 import com.aaronfang.fpsdetector.scene.FpsUtil;
@@ -150,6 +151,7 @@ public class FullFpsTracker extends AbsTracer {
                 extraValue.put(SCROLL_TIME, sumFrameCost);
                 int sumTheoreticalFrames = (int)(sumFrameCost / frameIntervalMillis);
                 extraValue.put(KEY_DROP_RATE, 1 - sumFrame * 1.0f / sumTheoreticalFrames);
+                Log.e("FPS-DETECTOR", extraValue.toString());
             } catch (JSONException e) {
                 e.printStackTrace();
             }finally {

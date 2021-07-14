@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 import android.view.Choreographer;
 import android.view.View;
 import android.view.WindowManager;
@@ -238,7 +239,7 @@ public class FpsDetector {
             int sumTheoreticalFrames = (int)(totalDuration / frameIntervalMillis);
             int realFrames = reportList.size();
             extraValue.put(KEY_DROP_RATE, 1 - realFrames * 1.0f / sumTheoreticalFrames);
-
+            Log.e("FPS-DETECTOR", extraValue.toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
