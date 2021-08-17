@@ -4,15 +4,19 @@
    Step 1. Add the JitPack repository to your build file
    Add it in your root build.gradle at the end of repositories:
    ```
-   dependencies {
-   	        implementation 'com.github.AaronFang123:FpsDetector:0.0.1'
-   	}
+   allprojects {
+        repositories {
+            ...
+            maven { url "https://jitpack.io" }
+        }
+   }
    ```
    Step 2. Add the dependency
    ```
    dependencies {
-   	        implementation 'com.github.AaronFang123:FpsDetector:Tag'
-   	}
+        ...
+   	  implementation 'com.github.AaronFang123:FpsDetector:0.0.1'
+   }
    ```
    [![](https://jitpack.io/v/AaronFang123/FpsDetector.svg)](https://jitpack.io/#AaronFang123/FpsDetector)
    
